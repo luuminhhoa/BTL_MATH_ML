@@ -1,0 +1,9 @@
+flowchart TD
+    B1["1. Đặc tả bài toán\n(spec.md: I/O, công thức, biên)"] --> B2["2. Xác lập Oracle kiểm chứng\n(Test case, giải tay, thư viện)"]
+    B2 --> B3["3. Thiết kế Prompt có ngữ cảnh\n(Vai trò, ràng buộc, định dạng)"]
+    B3 --> B4["4. Sinh mã theo bước nhỏ\n(Từng hàm nhỏ, commit nhỏ)"]
+    B4 --> B5["5. Đọc - Hiểu - Giải thích\n(Tự diễn giải & đối chiếu công thức)"]
+    B5 --> B6["6. Kiểm chứng\n(Unit test, Oracle, biên, sai số)"]
+    B6 -->|Lỗi / Chưa đạt| B7["7. Gỡ lỗi & Lặp\n(Lỗi + input tối thiểu + kỳ vọng)"]
+    B7 --> B4
+    B6 -->|Đạt| B8["8. Tái cấu trúc & Tài liệu\n(Docstring, NHAT_KY, PROMPT_LOG)"]
